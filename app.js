@@ -8,7 +8,7 @@ const userRouter = require("./routes/user.route");
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("combined"));
 app.use(bodyParser.json());
-// app.use(express.static("public"));
+// app.use(xpress.static("public"));
 
 app.get("/", (req, res) => {
   res.status(200).send("Hello Basic Exercise");
