@@ -3,6 +3,7 @@ const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const userRouter = require("./routes/user.route");
+const postRouter = require("./routes/post.route");
 
 // app.use(bodyParse());
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 
 //api router
 app.use("/api/basic", userRouter);
+app.use("/api/post", postRouter);
 
 const port = 8000;
 app.listen(port, () => {
